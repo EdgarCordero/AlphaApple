@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Book</title>
+    <link rel="stylesheet" href="styleIndexPage.css">
+</head>
+
+<body>
+
+<div class="container" id="blur">
+    <div class="navbar">
+            <input type="text" name="bookName" placeholder="Buscar libro..." class="searchField" required>
+            <input type="submit" name="submitSearch" class="search-button" value="Buscar">
+        </form>
+        <nav>
+            <ul>
+                <li><a href="">My Book</a></li>
+                <li><a href="#" onclick="toggle()"></a></li>
+                <li><a href="#" onclick="toggleSU()">Sign up</a></li>
+            </ul>
+        </nav>
+        <img src="menu.png" class="menu-icon">
+    </div>
+    <div class="row">
+        <div class="col-1">
+            <br>
+            <br>
+            <br>
+            <h2>Bienvenido a<br>My Book</h2>
+            <h3>El sitio en el que podras encontrar tus libros favoritos</h3>
+            <p>Ingresa el titulo que desees buscar en la barra de busqueda</p>
+            <button type="button" class="tutorial-button">Tour rapido<img src="arrow.png"></button>
+        </div>
+        <div class="col-2">
+            <div class="status">
+                <h2>Recomendaciones para ti</h2>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-info">
+                        <div class="overall"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="popup">
+    <button class="close-button" onclick="toggle()"><img src="close.png"></button>
+    <div class="title">
+        <h2>Hola de vuelta!</h2>
+        <p>Inicia sesion en tu cuenta desde aqui</p>
+    </div>
+    <form action="" method="post" class="input-data">
+        <input type="text" name="mail" placeholder="Email" required>
+        <input type="password" name="pass" placeholder="Contraseña" required>
+        <input type="submit" name="submitF" value="Sign in" class="sign-in">
+    </form>
+    <nav class="footer-in">
+        <ul>
+            <li><a href="">Has olvidado tu contraseña?</a></li>
+            <li><a href="">Crea una cuenta</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div id="signup">
+    <button class="close-button" onclick="toggleSU()"><img src="close.png"></button>
+    <div class="title">
+        <h2>Unete a My Book</h2>
+        <p>Registrate para poder disfrutar de nuestros servicios</p>
+    </div>
+
+    <form action="" method="post" class="input-data">
+        <input type="text" name="user_name" class="SUinp" placeholder="Nombre completo" required>
+        <div class="emailInput">
+            <div class="emailInputElement">
+                <input type="text" name="email" class="field-divided" placeholder="email" />
+            </div>
+            <div class="emailInputElement">
+                <input type="text" name="inst" class="field-divided" value="@"/>
+            </div>
+        </div>
+        <!--<input type="email" name="email" placeholder="Correo Institucional" required> -->
+        <input type="password" name="passw" class="SUinp" placeholder="Password" minlength="8" required>
+        <input type="submit" name="submitF" value="Unirme" class="sign-in">
+    </form>
+    <nav class="footer-in">
+        <ul>
+            <li><a href="">Ya tienes una cuenta? Inicia sesion</a></li>
+        </ul>
+    </nav>
+</div>
+
+<script type="text/javascript">
+    function toggle() {
+        var blur = document.getElementById('blur');
+        blur.classList.toggle('active');
+        var popup = document.getElementById('popup');
+        popup.classList.toggle('active');
+    }
+</script>
+<script type="text/javascript">
+    function toggleSU() {
+        var blur = document.getElementById('blur');
+        blur.classList.toggle('active');
+        var signup = document.getElementById('signup');
+        signup.classList.toggle('active');
+    }
+</script>
+<script type="text/javascript">
+    function toggleAP() {
+        var blur = document.getElementById('blur');
+        blur.classList.toggle('active');
+        var add = document.getElementById('add');
+        add.classList.toggle('active');
+    }
+</script>
+</body>
+
+</html>
